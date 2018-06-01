@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoPhoneViewController">
+            <connections>
+                <outlet property="phoneBtn" destination="yfn-cC-IzN" id="PqR-1v-dzk"/>
+                <outlet property="phoneView" destination="QFh-aQ-Rgo" id="LWL-pB-ATM"/>
+                <outlet property="videoPhoneCollectionView" destination="nsJ-Pc-orv" id="iEz-yC-W41"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nsJ-Pc-orv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oz7-KW-wMg">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFh-aQ-Rgo">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfn-cC-IzN">
+                            <rect key="frame" x="10" y="10" width="355" height="40"/>
+                            <color key="backgroundColor" red="0.36862745098039218" green="0.78431372549019607" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="通 话"/>
+                            <connections>
+                                <action selector="phoneBtnClick:" destination="-1" eventType="touchUpInside" id="R0c-Ob-BEE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="yfn-cC-IzN" firstAttribute="leading" secondItem="QFh-aQ-Rgo" secondAttribute="leading" constant="10" id="0Mm-zf-d7d"/>
+                        <constraint firstAttribute="bottom" secondItem="yfn-cC-IzN" secondAttribute="bottom" constant="10" id="Dab-53-f5j"/>
+                        <constraint firstAttribute="trailing" secondItem="yfn-cC-IzN" secondAttribute="trailing" constant="10" id="NlR-xf-pFj"/>
+                        <constraint firstItem="yfn-cC-IzN" firstAttribute="top" secondItem="QFh-aQ-Rgo" secondAttribute="top" constant="10" id="QCF-C2-gKs"/>
+                        <constraint firstAttribute="height" constant="60" id="jP1-fp-a53"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nsJ-Pc-orv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2xV-xp-zG5"/>
+                <constraint firstAttribute="bottom" secondItem="nsJ-Pc-orv" secondAttribute="bottom" id="Qjz-lW-W6e"/>
+                <constraint firstItem="nsJ-Pc-orv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YG4-Uf-HXb"/>
+                <constraint firstItem="QFh-aQ-Rgo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jks-d7-zSx"/>
+                <constraint firstAttribute="trailing" secondItem="QFh-aQ-Rgo" secondAttribute="trailing" id="kHU-Q1-WRg"/>
+                <constraint firstAttribute="bottom" secondItem="QFh-aQ-Rgo" secondAttribute="bottom" id="wfC-7a-uQF"/>
+                <constraint firstAttribute="trailing" secondItem="nsJ-Pc-orv" secondAttribute="trailing" id="zvj-11-sYH"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="102.5"/>
+        </view>
+    </objects>
+</document>

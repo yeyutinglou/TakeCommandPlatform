@@ -1,0 +1,39 @@
+//
+//  PrefixHeader.pch
+//  TakeCommandPlatform
+//
+//  Created by jyd on 2017/12/12.
+//  Copyright © 2017年 jyd. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#import "Default.h"
+#import "Category.h"
+#import "Macros.h"
+#import "URL_Constant.h"
+#import "ServiceConfigManager.h"
+#import "LoginManager.h"
+#import "IPDetector.h"
+
+#import "NetworkManager.h"
+#import "YYModel.h"
+#import "Masonry.h"
+#import "MBProgressHUD+MJ.h"
+#import "HMSegmentedControl.h"
+#import "UIImageView+WebCache.h"
+#import "ImagePicker.h"
+#import <WebRTC/WebRTC.h>
+#import "SocketRocket.h"
+#import "ChatDefault.h"
+#import <XMPPFramework/XMPPFramework.h>
+#import "FSCalendar.h"
+#endif /* PrefixHeader_pch */

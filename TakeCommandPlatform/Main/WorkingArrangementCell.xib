@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WorkingArrangementCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workBG" translatesAutoresizingMaskIntoConstraints="NO" id="hfN-xj-5cP">
+                        <rect key="frame" x="5" y="5" width="315" height="33.5"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timerShaft" translatesAutoresizingMaskIntoConstraints="NO" id="9ji-pJ-PVy">
+                        <rect key="frame" x="0.0" y="0.0" width="2" height="43.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="VMy-wV-cJs"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k46-8d-8DX">
+                        <rect key="frame" x="32" y="12" width="272" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="YkG-95-Xsg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="fHr-mh-xTd">
+                        <rect key="frame" x="294" y="14.5" width="6" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="6Ks-rG-mCQ"/>
+                            <constraint firstAttribute="width" constant="6" id="o7m-hR-dXk"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="k46-8d-8DX" firstAttribute="leading" secondItem="9ji-pJ-PVy" secondAttribute="trailing" constant="30" id="54m-p5-yc6"/>
+                    <constraint firstItem="9ji-pJ-PVy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DLd-VX-gOC"/>
+                    <constraint firstItem="9ji-pJ-PVy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LK4-gY-exJ"/>
+                    <constraint firstItem="k46-8d-8DX" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="PHA-oO-Flh"/>
+                    <constraint firstAttribute="bottom" secondItem="hfN-xj-5cP" secondAttribute="bottom" constant="5" id="RnY-K5-ciE"/>
+                    <constraint firstItem="fHr-mh-xTd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cid-IZ-ptx"/>
+                    <constraint firstItem="k46-8d-8DX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="e8A-T8-j5R"/>
+                    <constraint firstItem="hfN-xj-5cP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="l6e-eB-l2a"/>
+                    <constraint firstAttribute="trailing" secondItem="fHr-mh-xTd" secondAttribute="trailing" constant="20" id="nIl-ZL-YP7"/>
+                    <constraint firstAttribute="trailing" secondItem="hfN-xj-5cP" secondAttribute="trailing" id="oB4-aB-FYT"/>
+                    <constraint firstItem="hfN-xj-5cP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="qrR-uk-4Bz"/>
+                    <constraint firstAttribute="bottom" secondItem="9ji-pJ-PVy" secondAttribute="bottom" id="s7m-8U-r6c"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow" width="6" height="15"/>
+        <image name="timerShaft" width="4" height="80"/>
+        <image name="workBG" width="266" height="23"/>
+    </resources>
+</document>

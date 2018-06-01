@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NewMessageView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最新消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AQ-eL-cPu">
+                    <rect key="frame" x="16" y="10" width="71" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="71" id="O6a-eX-QMb"/>
+                        <constraint firstAttribute="height" constant="21" id="dpb-0O-hpd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgg-gW-8ej">
+                    <rect key="frame" x="319" y="10" width="46" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2Fw-af-QyS"/>
+                        <constraint firstAttribute="width" constant="46" id="DuA-uQ-UVB"/>
+                    </constraints>
+                    <state key="normal" title="更多">
+                        <color key="titleColor" red="0.0" green="0.40784313725490196" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="moreNewMessage:" destination="iN0-l3-epB" eventType="touchUpInside" id="Zki-A4-ERE"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="juq-J1-Q73">
+                    <rect key="frame" x="0.0" y="31" width="375" height="149"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9AQ-eL-cPu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="MUf-W8-Xud"/>
+                <constraint firstItem="9AQ-eL-cPu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Mul-cM-Ad9"/>
+                <constraint firstItem="Bgg-gW-8ej" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="P9G-7w-OYN"/>
+                <constraint firstItem="juq-J1-Q73" firstAttribute="top" secondItem="9AQ-eL-cPu" secondAttribute="bottom" id="ego-53-Iym"/>
+                <constraint firstAttribute="trailing" secondItem="juq-J1-Q73" secondAttribute="trailing" id="hSP-mt-DkD"/>
+                <constraint firstAttribute="bottom" secondItem="juq-J1-Q73" secondAttribute="bottom" id="oaC-Nh-BYs"/>
+                <constraint firstItem="juq-J1-Q73" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qeo-g9-Qft"/>
+                <constraint firstAttribute="trailing" secondItem="Bgg-gW-8ej" secondAttribute="trailing" constant="10" id="qxm-kj-y2q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="messageTableView" destination="juq-J1-Q73" id="zXM-vW-C0s"/>
+                <outlet property="moreBtn" destination="Bgg-gW-8ej" id="Fm4-eQ-G11"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-181"/>
+        </view>
+    </objects>
+</document>

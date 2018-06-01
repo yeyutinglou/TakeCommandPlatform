@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageListViewController">
+            <connections>
+                <outlet property="contactTabelView" destination="VZD-By-dcB" id="Nrg-YY-ouc"/>
+                <outlet property="messageTableView" destination="qIZ-AM-WST" id="EEW-wG-qlw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qIZ-AM-WST">
+                    <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Dou-d3-k5U"/>
+                        <outlet property="delegate" destination="-1" id="dnn-QI-Yxf"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VZD-By-dcB">
+                    <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="JPm-B3-lo8"/>
+                        <outlet property="delegate" destination="-1" id="wl2-7q-QVC"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qIZ-AM-WST" secondAttribute="bottom" id="MEs-W0-lgb"/>
+                <constraint firstAttribute="trailing" secondItem="qIZ-AM-WST" secondAttribute="trailing" id="Owz-Ti-CRu"/>
+                <constraint firstItem="qIZ-AM-WST" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="eCE-yg-bYK"/>
+                <constraint firstAttribute="trailing" secondItem="VZD-By-dcB" secondAttribute="trailing" id="eim-ct-Ccf"/>
+                <constraint firstAttribute="bottom" secondItem="VZD-By-dcB" secondAttribute="bottom" id="h3q-WL-5sx"/>
+                <constraint firstItem="qIZ-AM-WST" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pfR-mR-y6G"/>
+                <constraint firstItem="VZD-By-dcB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="rRx-gJ-r1r"/>
+                <constraint firstItem="VZD-By-dcB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w9v-Hj-mBs"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

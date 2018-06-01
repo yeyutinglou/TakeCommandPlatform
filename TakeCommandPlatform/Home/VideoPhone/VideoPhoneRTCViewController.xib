@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoPhoneRTCViewController">
+            <connections>
+                <outlet property="audioButton" destination="Is9-9f-X2H" id="f11-h1-aJY"/>
+                <outlet property="buttonContainerView" destination="ee1-5R-iMZ" id="4dD-us-gs5"/>
+                <outlet property="buttonContainerViewLeftConstraint" destination="naH-8D-dse" id="ddA-Rd-8q7"/>
+                <outlet property="hangupButton" destination="sgJ-Vw-Jgv" id="hnD-aV-j7i"/>
+                <outlet property="localView" destination="ZFT-kZ-gwh" id="zgm-VU-jv3"/>
+                <outlet property="localViewBottomConstraint" destination="0vs-ed-VTS" id="D9c-2r-GHL"/>
+                <outlet property="localViewHeightConstraint" destination="qs4-Uu-z7i" id="Lah-gP-mLj"/>
+                <outlet property="localViewRightConstraint" destination="rb9-cu-0r8" id="T1z-lK-64U"/>
+                <outlet property="localViewWidthConstraint" destination="bVc-Rl-OL4" id="fwk-c4-DvQ"/>
+                <outlet property="remoteView" destination="HMx-f1-QPX" id="j4g-6x-eNc"/>
+                <outlet property="remoteViewBottomConstraint" destination="Ih6-yp-77q" id="5fH-OD-mKy"/>
+                <outlet property="remoteViewLeftConstraint" destination="EGH-fV-iyC" id="X9t-8c-8Ih"/>
+                <outlet property="remoteViewRightConstraint" destination="aFV-mP-VDx" id="dMw-RT-d8E"/>
+                <outlet property="remoteViewTopConstraint" destination="8Fr-Q8-9N1" id="1rH-v4-Chj"/>
+                <outlet property="videoButton" destination="oaI-yf-ipK" id="pCh-wa-Dxw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMx-f1-QPX" customClass="RTCEAGLVideoView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFT-kZ-gwh" customClass="RTCEAGLVideoView">
+                    <rect key="frame" x="227" y="519" width="120" height="120"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="bVc-Rl-OL4"/>
+                        <constraint firstAttribute="height" constant="120" id="qs4-Uu-z7i"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ee1-5R-iMZ">
+                    <rect key="frame" x="20" y="253" width="40" height="160"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-9f-X2H">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="audioButtonPressed:" destination="-1" eventType="touchUpInside" id="rcf-iw-HxK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaI-yf-ipK">
+                            <rect key="frame" x="0.0" y="60" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="videoButtonPressed:" destination="-1" eventType="touchUpInside" id="a0V-jh-zRb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgJ-Vw-Jgv">
+                            <rect key="frame" x="0.0" y="120" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="hangupButtonPressed:" destination="-1" eventType="touchUpInside" id="pJk-RU-HXc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="8yq-ri-uYX"/>
+                        <constraint firstAttribute="height" constant="160" id="Eu3-Da-5CJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ZFT-kZ-gwh" secondAttribute="bottom" constant="28" id="0vs-ed-VTS"/>
+                <constraint firstItem="HMx-f1-QPX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8Fr-Q8-9N1"/>
+                <constraint firstItem="HMx-f1-QPX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EGH-fV-iyC"/>
+                <constraint firstAttribute="bottom" secondItem="HMx-f1-QPX" secondAttribute="bottom" id="Ih6-yp-77q"/>
+                <constraint firstItem="ee1-5R-iMZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Mka-iP-YuI"/>
+                <constraint firstAttribute="trailing" secondItem="HMx-f1-QPX" secondAttribute="trailing" id="aFV-mP-VDx"/>
+                <constraint firstItem="ee1-5R-iMZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="naH-8D-dse"/>
+                <constraint firstAttribute="trailing" secondItem="ZFT-kZ-gwh" secondAttribute="trailing" constant="28" id="rb9-cu-0r8"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

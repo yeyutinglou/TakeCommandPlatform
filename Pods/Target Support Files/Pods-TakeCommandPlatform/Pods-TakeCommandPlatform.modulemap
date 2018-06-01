@@ -1,0 +1,6 @@
+framework module Pods_TakeCommandPlatform {
+  umbrella header "Pods-TakeCommandPlatform-umbrella.h"
+
+  export *
+  module * { export * }
+}

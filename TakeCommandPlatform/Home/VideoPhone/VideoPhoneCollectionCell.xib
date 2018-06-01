@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VideoPhoneCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="242" height="106"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="242" height="106"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3r-61-VVR">
+                        <rect key="frame" x="0.0" y="0.0" width="242" height="106"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telephone" translatesAutoresizingMaskIntoConstraints="NO" id="BMP-ei-FRM">
+                                <rect key="frame" x="108.5" y="5" width="25" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="p1y-NI-upf"/>
+                                    <constraint firstAttribute="width" constant="25" id="rVy-yu-IRp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tra-KJ-nsc">
+                                <rect key="frame" x="0.0" y="86.5" width="242" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_check" translatesAutoresizingMaskIntoConstraints="NO" id="PVM-MG-yEC">
+                                <rect key="frame" x="217" y="81" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="hiZ-D2-pyd"/>
+                                    <constraint firstAttribute="height" constant="20" id="xOs-sv-fNd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65098039215686276" green="0.80392156862745101" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Tra-KJ-nsc" secondAttribute="bottom" constant="5" id="41q-G0-zMt"/>
+                            <constraint firstAttribute="trailing" secondItem="PVM-MG-yEC" secondAttribute="trailing" constant="5" id="Ajt-wD-XIY"/>
+                            <constraint firstItem="BMP-ei-FRM" firstAttribute="centerX" secondItem="p3r-61-VVR" secondAttribute="centerX" id="OfZ-DV-ywT"/>
+                            <constraint firstAttribute="bottom" secondItem="PVM-MG-yEC" secondAttribute="bottom" constant="5" id="dHs-no-Sm3"/>
+                            <constraint firstAttribute="trailing" secondItem="Tra-KJ-nsc" secondAttribute="trailing" id="fv5-dN-leg"/>
+                            <constraint firstItem="Tra-KJ-nsc" firstAttribute="leading" secondItem="p3r-61-VVR" secondAttribute="leading" id="o71-4o-2nB"/>
+                            <constraint firstItem="BMP-ei-FRM" firstAttribute="top" secondItem="p3r-61-VVR" secondAttribute="top" constant="5" id="zsg-vV-ceT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="p3r-61-VVR" secondAttribute="bottom" id="2Nf-wG-smx"/>
+                <constraint firstItem="p3r-61-VVR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="i89-ke-SNj"/>
+                <constraint firstItem="p3r-61-VVR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sAI-Da-W82"/>
+                <constraint firstAttribute="trailing" secondItem="p3r-61-VVR" secondAttribute="trailing" id="xlI-JR-eCn"/>
+            </constraints>
+            <size key="customSize" width="242" height="106"/>
+            <connections>
+                <outlet property="bgView" destination="p3r-61-VVR" id="3B2-qX-Hrc"/>
+                <outlet property="calling" destination="PVM-MG-yEC" id="pyK-nQ-Doy"/>
+                <outlet property="name" destination="Tra-KJ-nsc" id="2gy-RQ-uof"/>
+                <outlet property="telephone" destination="BMP-ei-FRM" id="hHO-8H-XSv"/>
+            </connections>
+            <point key="canvasLocation" x="65" y="147"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="phone_check" width="20" height="20"/>
+        <image name="telephone" width="25" height="17"/>
+    </resources>
+</document>

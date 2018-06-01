@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcR-7r-hme">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hxy-fc-uXs">
+                            <rect key="frame" x="87.5" y="50" width="200" height="200"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="eLU-dk-t7C"/>
+                                <constraint firstAttribute="width" constant="200" id="s5p-Qj-lgU"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Hxy-fc-uXs" firstAttribute="centerX" secondItem="NcR-7r-hme" secondAttribute="centerX" id="Zgi-Qf-eVr"/>
+                        <constraint firstAttribute="height" constant="300" id="ksB-Je-1Ib"/>
+                        <constraint firstItem="Hxy-fc-uXs" firstAttribute="centerY" secondItem="NcR-7r-hme" secondAttribute="centerY" id="nqO-qQ-8In"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0BH-0w-YRU">
+                    <rect key="frame" x="0.0" y="300" width="375" height="367"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="e2r-VD-z3L"/>
+                        <outlet property="delegate" destination="-1" id="6I3-G4-gGg"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NcR-7r-hme" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8nq-kY-A7B"/>
+                <constraint firstAttribute="bottom" secondItem="0BH-0w-YRU" secondAttribute="bottom" id="CXF-Ie-DzM"/>
+                <constraint firstItem="0BH-0w-YRU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fka-Jz-aeD"/>
+                <constraint firstItem="NcR-7r-hme" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HYA-Wb-0eZ"/>
+                <constraint firstAttribute="trailing" secondItem="NcR-7r-hme" secondAttribute="trailing" id="cCu-Z1-wJz"/>
+                <constraint firstAttribute="trailing" secondItem="0BH-0w-YRU" secondAttribute="trailing" id="cZS-vt-e5V"/>
+                <constraint firstItem="0BH-0w-YRU" firstAttribute="top" secondItem="NcR-7r-hme" secondAttribute="bottom" id="rzP-V3-C9d"/>
+                <constraint firstItem="0BH-0w-YRU" firstAttribute="top" secondItem="NcR-7r-hme" secondAttribute="bottom" id="wJT-nx-fQ2"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StudentSeatCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="107" height="52"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="107" height="52"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="9TS-pr-nMZ">
+                        <rect key="frame" x="0.0" y="0.0" width="107" height="52"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="JbO-wk-s88">
+                        <rect key="frame" x="4.5" y="16" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="YDL-vk-dj1"/>
+                            <constraint firstAttribute="width" constant="20" id="l4S-ej-WcG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fD-gY-And">
+                        <rect key="frame" x="5" y="16" width="19" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="JN9-JS-USG"/>
+                            <constraint firstAttribute="width" constant="19" id="i1N-bR-szf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.27843137254901962" green="0.47058823529411764" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="杜玉伟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-rK-NX5">
+                        <rect key="frame" x="24" y="15.5" width="83" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="AUB-7P-hqS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="wRa-rK-NX5" firstAttribute="leading" secondItem="7fD-gY-And" secondAttribute="trailing" id="6NI-9l-vg9"/>
+                <constraint firstItem="9TS-pr-nMZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7SP-vu-A1t"/>
+                <constraint firstAttribute="bottom" secondItem="9TS-pr-nMZ" secondAttribute="bottom" id="Apw-d4-6pB"/>
+                <constraint firstItem="9TS-pr-nMZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EqF-fZ-CNn"/>
+                <constraint firstItem="7fD-gY-And" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="KkP-4c-h8i"/>
+                <constraint firstItem="wRa-rK-NX5" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="N3q-40-DwD"/>
+                <constraint firstAttribute="trailing" secondItem="wRa-rK-NX5" secondAttribute="trailing" id="Svc-Oc-vzz"/>
+                <constraint firstAttribute="trailing" secondItem="9TS-pr-nMZ" secondAttribute="trailing" id="VfF-l3-WjP"/>
+                <constraint firstItem="7fD-gY-And" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="YOi-SE-301"/>
+                <constraint firstItem="JbO-wk-s88" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="eUX-Lr-8hW"/>
+                <constraint firstItem="7fD-gY-And" firstAttribute="centerX" secondItem="JbO-wk-s88" secondAttribute="centerX" id="pg8-I4-WjM"/>
+            </constraints>
+            <size key="customSize" width="107" height="52"/>
+            <connections>
+                <outlet property="bg" destination="9TS-pr-nMZ" id="jBL-hI-8Th"/>
+                <outlet property="seatNum" destination="7fD-gY-And" id="7i7-TZ-IjJ"/>
+                <outlet property="studentName" destination="wRa-rK-NX5" id="Mdn-u9-u0H"/>
+            </connections>
+            <point key="canvasLocation" x="61.5" y="104"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="circle" width="18" height="18"/>
+        <image name="rectangle" width="60" height="28"/>
+    </resources>
+</document>
